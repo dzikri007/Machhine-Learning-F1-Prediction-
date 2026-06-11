@@ -24,3 +24,16 @@ Machine Learning project untuk memprediksi hasil balapan Formula 1 menggunakan d
 Model berhasil mencapai **ROC-AUC Score sebesar 0.89**.
 
 Berdasarkan hasil prediksi, **Driver ID 875** menjadi kandidat pemenang utama dengan probabilitas kemenangan **92.4%**, didukung oleh konsistensi lap time yang tinggi dan strategi pit stop yang efisien.
+
+## Dataset
+
+Dataset yang digunakan berasal dari kompetisi Kaggle **"Predicting F1 Pit Stops"** (Playground Series - Season 6 Episode 5).
+
+Data terdiri dari:
+- `train.csv` (data training)
+- `test.csv` (data testing)
+- `sample_submission.csv`
+
+Dataset berisi informasi terkait strategi balapan Formula 1, kondisi ban, dan performa pembalap yang digunakan untuk memprediksi keputusan pit stop serta hasil balapan.
+
+🔗 Source: https://www.kaggle.com/competitions/playground-series-s6e5
