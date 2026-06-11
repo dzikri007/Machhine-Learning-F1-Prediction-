@@ -1,6 +1,6 @@
 # Proyek Prediksi Hasil Balapan Formula 1 🏎️
 
-Proyek ini bertujuan untuk membangun model *machine learning* yang mampu memprediksi hasil balapan Formula 1. Dengan menggunakan data historis balapan (FastF1 API), model ini dapat memprediksi siapa pemenang balapan serta kapan waktu strategis bagi pembalap untuk melakukan *pit stop*.
+Proyek ini bertujuan untuk membangun model *machine learning* yang mampu memprediksi hasil balapan Formula 1. Dengan menggunakan data historis balapan, model ini dapat memprediksi siapa pemenang balapan serta kapan waktu strategis bagi pembalap untuk melakukan *pit stop*.
 
 ## Fitur Utama
 * **Analisis Konsistensi:** Mengukur stabilitas *lap time* pembalap menggunakan fitur `Driver_Stability`.
