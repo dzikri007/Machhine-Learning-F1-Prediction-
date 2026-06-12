@@ -1,4 +1,10 @@
-# Proyek Prediksi Hasil Balapan Formula 1 🏎️
+  # Proyek Prediksi Hasil Balapan Formula 1 🏎️
+  
+<p align="center">
+  <img src="Image.jpeg" alt="Analisis Performa Model" width="700">
+  <br>
+  <em>Gambar: Visualisasi Performa Model & Deteksi Pit Stop</em>
+</p>
 
 Proyek ini bertujuan untuk membangun model *machine learning* yang mampu memprediksi hasil balapan Formula 1. Dengan menggunakan data historis balapan, model ini dapat memprediksi siapa pemenang balapan serta kapan waktu strategis bagi pembalap untuk melakukan *pit stop*.
 
@@ -30,6 +36,20 @@ Model berhasil memetakan bahwa kemenangan bukan sekadar tentang kecepatan murni,
 * **Language:** Python
 * **Libraries:** Pandas, NumPy, Scikit-Learn, XGBoost, Matplotlib, Seaborn
 * **Model:** XGBoost Classifier
+
+## Analisis Hasil & Kesimpulan
+
+**Interpretasi Pemenang**
+Berdasarkan hasil inferensi model `XGBoost`, **Driver dengan ID 875** diprediksi sebagai pemenang dominan dengan probabilitas kemenangan mencapai **92.4%**. 
+
+**Mengapa ID 875 Dipilih sebagai Pemenang?**
+* **Stabilitas Performa:** Varians *lap time* terendah.
+* **Manajemen Ban:** Efisiensi tinggi pada fase ban kritis.
+* **Efisiensi Strategi:** Mampu mengeksekusi strategi yang presisi berdasarkan prediksi *pit stop* yang kini lebih sensitif.
+
+
+**Kesimpulan**
+Model berhasil memetakan bahwa kemenangan bukan sekadar tentang kecepatan murni, melainkan akumulasi dari konsistensi, manajemen degradasi ban, dan eksekusi strategi *pit stop* yang tepat waktu.
 
 ---
 *Proyek ini merupakan bagian dari portofolio Data Science Owi.*
