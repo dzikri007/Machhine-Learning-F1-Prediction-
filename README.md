@@ -1,39 +1,35 @@
-# 🏎️ F1 Race Prediction Model
+# Proyek Prediksi Hasil Balapan Formula 1 🏎️
 
-Machine Learning project untuk memprediksi hasil balapan Formula 1 menggunakan data historis pembalap, lap time, dan kondisi ban.
+Proyek ini bertujuan untuk membangun model *machine learning* yang mampu memprediksi hasil balapan Formula 1. Dengan menggunakan data historis balapan, model ini dapat memprediksi siapa pemenang balapan serta kapan waktu strategis bagi pembalap untuk melakukan *pit stop*.
 
-## Features
+## Fitur Utama
+* **Analisis Konsistensi:** Mengukur stabilitas *lap time* pembalap menggunakan fitur `Driver_Stability`.
+* **Strategi Pit Stop:** Memprediksi kebutuhan *pit stop* berdasarkan degradasi ban (`Is_Worn_Out`) dengan *tuning* bobot kelas untuk sensitivitas tinggi.
+* **Prediksi Pemenang:** Menggunakan algoritma **XGBoost** untuk menentukan probabilitas kemenangan pembalap.
 
-- Analisis konsistensi pembalap dengan fitur `Driver_Stability`
-- Prediksi kebutuhan pit stop berdasarkan degradasi ban (`Is_Worn_Out`)
-- Prediksi pemenang balapan menggunakan algoritma XGBoost
-- Evaluasi model menggunakan ROC-AUC
+## Metodologi
+1. **EDA:** Analisis korelasi performa dan degradasi ban melalui 3 pertanyaan kunci: stabilitas tim, pola *pit stop*, dan *pace* pemenang.
+2. **Feature Engineering:** Membuat variabel baru seperti `Driver_Stability` dan `Cumulative_Degradation`.
+3. **Modeling:** Implementasi model klasifikasi *XGBoost* dengan penyesuaian `scale_pos_weight`.
+4. **Evaluasi:** Menggunakan metrik **ROC-AUC** (mencapai skor **0.89**) dan *Classification Report* dengan *Recall* tinggi (0.90) untuk deteksi *pit stop*.
 
-## Methodology
+## Analisis Hasil & Kesimpulan
 
-- Exploratory Data Analysis (EDA)
-- Feature Engineering
-  - Driver_Stability
-  - Cumulative_Degradation
-  - Is_Worn_Out
-- Model Training menggunakan XGBoost Classifier
-- Model Evaluation
+**Interpretasi Pemenang**
+Berdasarkan hasil inferensi model `XGBoost`, **Driver dengan ID 875** diprediksi sebagai pemenang dominan dengan probabilitas kemenangan mencapai **92.4%**. 
 
-## Results
+**Mengapa ID 875 Dipilih sebagai Pemenang?**
+* **Stabilitas Performa:** Varians *lap time* terendah.
+* **Manajemen Ban:** Efisiensi tinggi pada fase ban kritis.
+* **Efisiensi Strategi:** Mampu mengeksekusi strategi yang presisi berdasarkan prediksi *pit stop* yang kini lebih sensitif.
 
-Model berhasil mencapai **ROC-AUC Score sebesar 0.89**.
+**Kesimpulan**
+Model berhasil memetakan bahwa kemenangan bukan sekadar tentang kecepatan murni, melainkan akumulasi dari konsistensi, manajemen degradasi ban, dan eksekusi strategi *pit stop* yang tepat waktu.
 
-Berdasarkan hasil prediksi, **Driver ID 875** menjadi kandidat pemenang utama dengan probabilitas kemenangan **92.4%**, didukung oleh konsistensi lap time yang tinggi dan strategi pit stop yang efisien.
+## Tech Stack
+* **Language:** Python
+* **Libraries:** Pandas, NumPy, Scikit-Learn, XGBoost, Matplotlib, Seaborn
+* **Model:** XGBoost Classifier
 
-## Dataset
-
-Dataset yang digunakan berasal dari kompetisi Kaggle **"Predicting F1 Pit Stops"** (Playground Series - Season 6 Episode 5).
-
-Data terdiri dari:
-- `train.csv` (data training)
-- `test.csv` (data testing)
-- `sample_submission.csv`
-
-Dataset berisi informasi terkait strategi balapan Formula 1, kondisi ban, dan performa pembalap yang digunakan untuk memprediksi keputusan pit stop serta hasil balapan.
-
-🔗 Source: https://www.kaggle.com/competitions/playground-series-s6e5
+---
+*Proyek ini merupakan bagian dari portofolio Data Science Owi.*
