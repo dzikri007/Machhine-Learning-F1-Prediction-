@@ -108,9 +108,8 @@ The model demonstrates that success in Formula 1 depends on more than raw speed.
 This project utilizes historical **Formula 1 race data**, including lap times, tire degradation, driver performance, and pit stop information for predictive modeling.
 
 **Dataset Source:**
-https://www.kaggle.com/datasets
+[https://www.kaggle.com/datasets](https://www.kaggle.com/competitions/playground-series-s6e5)
 
-> Replace the link above with the specific Kaggle dataset used in your project.
 
 ---
 
